@@ -37,28 +37,7 @@ namespace CRUD_BASICO
         }
 
 
-        private void btn_cargarArchivo_Click(object sender, EventArgs e)
-        {
-            
-            //PARA LEER EL ARCHIVO           
-            String ruta = "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\Net c#\\CRUD_BASICO\\Nombres.txt";
-            StreamReader sr = new StreamReader(ruta); //permite leer y encontrar el archivo
-
-            while (!sr.EndOfStream)//mientras no sea el final de linea entra
-            {
-                string linea = sr.ReadLine();//Lee la linea
-                string[] aux = linea.Split(',');//separa la cadena por coma crea un vector y los almacena en posiciones
-
-                //Llenar dataGridView
-                datos.Rows.Add(aux[0], aux[1], aux[2], aux[3], aux[4], aux[5]);
-
-
-            }
-            dataGridView_busqueda.DataSource = datos;
-            sr.Close();
-
-        }
-
+        
         //Boton buscar en los datos registrados
         private void button_Buscar_Click(object sender, EventArgs e)
         {

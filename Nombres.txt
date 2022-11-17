@@ -1,3 +1,4 @@
 F-1,Ferrari 296,Ferrari,2022,Melanni,Nuevo
 T-2,Ford Explorer 2022,Toyota,2022,Melanni,Nuevo
 M-K123,Ford Mustang, Mustang,2022,Melanni,Nuevo
+a,a,a,a,a,a

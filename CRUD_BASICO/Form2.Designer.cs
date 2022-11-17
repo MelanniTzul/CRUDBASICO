@@ -36,7 +36,6 @@
             this.dataGridView_busqueda = new System.Windows.Forms.DataGridView();
             this.lbl_carroSeleccionado = new System.Windows.Forms.Label();
             this.btn_cerrar = new System.Windows.Forms.Button();
-            this.btn_cargarArchivo = new System.Windows.Forms.Button();
             this.checkBox_nombre = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_busqueda)).BeginInit();
@@ -111,16 +110,6 @@
             this.btn_cerrar.UseVisualStyleBackColor = true;
             this.btn_cerrar.Click += new System.EventHandler(this.btn_cerrar_Click);
             // 
-            // btn_cargarArchivo
-            // 
-            this.btn_cargarArchivo.Location = new System.Drawing.Point(879, 375);
-            this.btn_cargarArchivo.Name = "btn_cargarArchivo";
-            this.btn_cargarArchivo.Size = new System.Drawing.Size(155, 29);
-            this.btn_cargarArchivo.TabIndex = 7;
-            this.btn_cargarArchivo.Text = "CARGAR ARCHIVO";
-            this.btn_cargarArchivo.UseVisualStyleBackColor = true;
-            this.btn_cargarArchivo.Click += new System.EventHandler(this.btn_cargarArchivo_Click);
-            // 
             // checkBox_nombre
             // 
             this.checkBox_nombre.AutoSize = true;
@@ -139,7 +128,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1315, 552);
             this.Controls.Add(this.checkBox_nombre);
-            this.Controls.Add(this.btn_cargarArchivo);
             this.Controls.Add(this.btn_cerrar);
             this.Controls.Add(this.lbl_carroSeleccionado);
             this.Controls.Add(this.dataGridView_busqueda);
@@ -167,7 +155,6 @@
         private DataGridView dataGridView_busqueda;
         private Label lbl_carroSeleccionado;
         private Button btn_cerrar;
-        private Button btn_cargarArchivo;
         private CheckBox checkBox_nombre;
     }
 }
