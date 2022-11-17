@@ -39,6 +39,7 @@ namespace CRUD_BASICO
 
         private void btn_cargarArchivo_Click(object sender, EventArgs e)
         {
+            
             //PARA LEER EL ARCHIVO           
             String ruta = "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\Net c#\\CRUD_BASICO\\Nombres.txt";
             StreamReader sr = new StreamReader(ruta); //permite leer y encontrar el archivo
