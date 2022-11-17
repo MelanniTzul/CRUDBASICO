@@ -19,23 +19,21 @@ namespace CRUD_BASICO
             InitializeComponent();
         }
         //DataTable datos = new DataTable();//Cree mi tabla de datos 
-        DataTable datos = Clases.variablesGlobales.baseDatosGlobal;
+        DataTable datos = Clases.variablesGlobales.baseDatosGlobal;//Creamos tabla por medio de una clase
         private void text_buscador_TextChanged(object sender, EventArgs e)
         {
+            Clases.variablesGlobales.baseDatosGlobal = datos;
 
         }
 
         private void Form2_Load(object sender, EventArgs e)
-        {
-          
-
+        {         
             dataGridView_busqueda.DataSource = datos;//Asignando datos al dataGridView
-            btn_cargarArchivo.PerformClick();
         }
 
         private void btn_cerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close();//cerrar ventana
         }
 
 
@@ -51,7 +49,7 @@ namespace CRUD_BASICO
                 string[] aux = linea.Split(',');//separa la cadena por coma crea un vector y los almacena en posiciones
 
                 //Llenar dataGridView
-                datos.Rows.Add(aux[0], aux[1], aux[2], aux[3], aux[4]);
+                datos.Rows.Add(aux[0], aux[1], aux[2], aux[3], aux[4], aux[5]);
 
 
             }
@@ -59,5 +57,40 @@ namespace CRUD_BASICO
             sr.Close();
 
         }
+
+        private void button_Buscar_Click(object sender, EventArgs e)
+        {
+            if(checkBox_nombre.Checked)
+            {
+                //Buscar por nombre
+                for (int i =0; i<datos.Rows.Count; i++)
+                {
+                    if (datos.Rows[i][1].ToString().Contains(txt_buscador.Text))
+                    {
+                        lbl_carroSeleccionado.Text = datos.Rows[i][1].ToString();
+                    }
+                }               
+            }
+            else
+            {
+                //Buscar por placa
+                if (txt_buscador.Text != String.Empty)//lo hace si encuentra datos
+                {
+                    //Recorrer base de datos
+                    for (int i = 0; i < datos.Rows.Count; i++)
+                    {
+                        if (datos.Rows[i][0].ToString() == txt_buscador.Text)
+                        {
+                            //lbl_carroSeleccionado.Text = txt_buscador.Text;
+                            lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString();
+                        }
+                    }
+                }
+
+            }
+
+           
+        }
+       
     }
 }
