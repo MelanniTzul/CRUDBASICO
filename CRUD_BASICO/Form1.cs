@@ -36,7 +36,8 @@ namespace CRUD_BASICO
         //Creacion de columnas
         private void Form1_Load(object sender, EventArgs e)
         {
-            datos.Columns.Add("PLACA");
+            
+            datos.Columns.Add("ID PLACA");
             datos.Columns.Add("MODELO");
             datos.Columns.Add("NOMBRE");
             datos.Columns.Add("AÑO");
@@ -44,6 +45,7 @@ namespace CRUD_BASICO
             datos.Columns.Add("ESTADO");
             dataGridView.DataSource = datos;//Asignando datos al dataGridView
             mostrarDatosEnTabla();//leemos el archivo al ejecutarse
+            
         }
 
         //Darle click a la imagen 

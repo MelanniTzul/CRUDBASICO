@@ -63,7 +63,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(940, 53);
+            this.pictureBox1.Location = new System.Drawing.Point(1035, 49);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(107, 91);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -73,11 +73,11 @@
             // button_Buscar
             // 
             this.button_Buscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button_Buscar.Location = new System.Drawing.Point(538, 83);
+            this.button_Buscar.Location = new System.Drawing.Point(812, 80);
             this.button_Buscar.Name = "button_Buscar";
-            this.button_Buscar.Size = new System.Drawing.Size(126, 27);
+            this.button_Buscar.Size = new System.Drawing.Size(175, 27);
             this.button_Buscar.TabIndex = 3;
-            this.button_Buscar.Text = "BUSCAR";
+            this.button_Buscar.Text = "BUSCAR ";
             this.button_Buscar.UseVisualStyleBackColor = true;
             this.button_Buscar.Click += new System.EventHandler(this.button_Buscar_Click);
             // 
@@ -126,18 +126,18 @@
             this.checkBox_nombre.AutoSize = true;
             this.checkBox_nombre.Checked = true;
             this.checkBox_nombre.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox_nombre.Location = new System.Drawing.Point(692, 85);
+            this.checkBox_nombre.Location = new System.Drawing.Point(564, 83);
             this.checkBox_nombre.Name = "checkBox_nombre";
-            this.checkBox_nombre.Size = new System.Drawing.Size(187, 24);
+            this.checkBox_nombre.Size = new System.Drawing.Size(215, 24);
             this.checkBox_nombre.TabIndex = 8;
-            this.checkBox_nombre.Text = "Busqueda por nombre";
+            this.checkBox_nombre.Text = "BUSQUEDA POR NOMBRE";
             this.checkBox_nombre.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 604);
+            this.ClientSize = new System.Drawing.Size(1315, 552);
             this.Controls.Add(this.checkBox_nombre);
             this.Controls.Add(this.btn_cargarArchivo);
             this.Controls.Add(this.btn_cerrar);

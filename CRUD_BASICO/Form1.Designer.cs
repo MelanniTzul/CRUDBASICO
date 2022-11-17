@@ -235,7 +235,7 @@
             // 
             // txt_placa
             // 
-            this.txt_placa.Location = new System.Drawing.Point(93, 95);
+            this.txt_placa.Location = new System.Drawing.Point(93, 92);
             this.txt_placa.Name = "txt_placa";
             this.txt_placa.Size = new System.Drawing.Size(247, 27);
             this.txt_placa.TabIndex = 21;

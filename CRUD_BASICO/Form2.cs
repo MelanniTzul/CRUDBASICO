@@ -58,20 +58,38 @@ namespace CRUD_BASICO
 
         }
 
+        //Boton buscar en los datos registrados
         private void button_Buscar_Click(object sender, EventArgs e)
         {
-            if(checkBox_nombre.Checked)
+            if(checkBox_nombre.Checked)//Si es true
             {
                 //Buscar por nombre
+                //corremos datos
                 for (int i =0; i<datos.Rows.Count; i++)
                 {
                     if (datos.Rows[i][1].ToString().Contains(txt_buscador.Text))
                     {
-                        lbl_carroSeleccionado.Text = datos.Rows[i][1].ToString();
+                        lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString() + " " + datos.Rows[i][1].ToString() + " " + datos.Rows[i][2].ToString() + " " + datos.Rows[i][3].ToString() + " " + datos.Rows[i][4].ToString() + " " + datos.Rows[i][5].ToString();
+                    }
+                    else if (datos.Rows[i][2].ToString().Contains(txt_buscador.Text))
+                    {
+                        lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString() + " " + datos.Rows[i][1].ToString() + " " + datos.Rows[i][2].ToString() + " " + datos.Rows[i][3].ToString() + " " + datos.Rows[i][4].ToString() + " " + datos.Rows[i][5].ToString();
+                    }
+                    else if (datos.Rows[i][3].ToString().Contains(txt_buscador.Text))
+                    {
+                        lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString() + " " + datos.Rows[i][1].ToString() + " " + datos.Rows[i][2].ToString() + "-" + datos.Rows[i][3].ToString() + " " + datos.Rows[i][4].ToString() + " " + datos.Rows[i][5].ToString();
+                    }
+                    else if (datos.Rows[i][4].ToString().Contains(txt_buscador.Text))
+                    {
+                        lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString() + " " + datos.Rows[i][1].ToString() + " " + datos.Rows[i][2].ToString() + "-" + datos.Rows[i][3].ToString() + " " + datos.Rows[i][4].ToString() + " " + datos.Rows[i][5].ToString();
+                    }
+                    else if(datos.Rows[i][5].ToString().Contains(txt_buscador.Text))
+                    {
+                        lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString() + " " + datos.Rows[i][1].ToString() + " " + datos.Rows[i][2].ToString() + "-" + datos.Rows[i][3].ToString() + " " + datos.Rows[i][4].ToString() + " " + datos.Rows[i][5].ToString();
                     }
                 }               
             }
-            else
+            else 
             {
                 //Buscar por placa
                 if (txt_buscador.Text != String.Empty)//lo hace si encuentra datos
@@ -81,8 +99,9 @@ namespace CRUD_BASICO
                     {
                         if (datos.Rows[i][0].ToString() == txt_buscador.Text)
                         {
-                            //lbl_carroSeleccionado.Text = txt_buscador.Text;
-                            lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString();
+                           // lbl_carroSeleccionado.Text = txt_buscador.Text;
+                             //lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString();
+                            lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString() + "-" + datos.Rows[i][1].ToString() + "-" + datos.Rows[i][2].ToString() + "-" + datos.Rows[i][3].ToString() + "-" + datos.Rows[i][4].ToString() + "-" + datos.Rows[i][5].ToString();
                         }
                     }
                 }
