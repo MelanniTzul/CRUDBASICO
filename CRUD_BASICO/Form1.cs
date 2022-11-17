@@ -32,11 +32,11 @@ namespace CRUD_BASICO
             dataGridView.DataSource = datos;
             sr.Close();
         }
-        
+
         //Creacion de columnas
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             datos.Columns.Add("ID PLACA");
             datos.Columns.Add("MODELO");
             datos.Columns.Add("NOMBRE");
@@ -45,7 +45,7 @@ namespace CRUD_BASICO
             datos.Columns.Add("ESTADO");
             dataGridView.DataSource = datos;//Asignando datos al dataGridView
             mostrarDatosEnTabla();//leemos el archivo al ejecutarse
-            
+
         }
 
         //Darle click a la imagen 
@@ -72,7 +72,7 @@ namespace CRUD_BASICO
         //Guardar datos
         private void button_guardar_Click(object sender, EventArgs e)
         {
-            if (txt_placa.Text!=String.Empty && textBox_modelo.Text != String.Empty && textBox_nombre.Text != String.Empty && textBox_year.Text != String.Empty && textBox_dueno.Text != String.Empty && textBox_estado.Text != String.Empty)
+            if (txt_placa.Text != String.Empty && textBox_modelo.Text != String.Empty && textBox_nombre.Text != String.Empty && textBox_year.Text != String.Empty && textBox_dueno.Text != String.Empty && textBox_estado.Text != String.Empty)
             {
 
                 //Ingresar datos a la tabla 
@@ -118,7 +118,7 @@ namespace CRUD_BASICO
             datos.Rows[index][5] = textBox_estado.Text;
 
             button_guardar.Enabled = true;
-            button1_modificar.Enabled =false;
+            button1_modificar.Enabled = false;
             button2_eliminar.Enabled = false;
             limpiartxt();
         }
@@ -126,12 +126,16 @@ namespace CRUD_BASICO
 
         ///BOTON ELIMINAR
         private void button2_eliminar_Click(object sender, EventArgs e)
-        {        
-            datos.Rows.RemoveAt(index);
-            button_guardar.Enabled = true;
-            button2_eliminar.Enabled = false;
-            button1_modificar.Enabled = false;
-            limpiartxt();
+        {   //Preguntamos si quiere eliminar el dato
+            if (MessageBox.Show("¿Esta seguro que quiere eliminar?", "ATENTO", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                datos.Rows.RemoveAt(index);
+                button_guardar.Enabled = true;
+                button2_eliminar.Enabled = false;
+                button1_modificar.Enabled = false;
+                limpiartxt();
+            }
+
         }
 
         //Boton que nos dirige al otro form
@@ -141,7 +145,7 @@ namespace CRUD_BASICO
             formulario.Show();//llamamos al Form2
 
             //Mi variableglobal le asigno los datos que de mi tabla que ya tengo aqui                  
-           // Clases.variablesGlobales.baseDatosGlobal=datos;//le paso mis datos de mi tabla a la variable global 
+            // Clases.variablesGlobales.baseDatosGlobal=datos;//le paso mis datos de mi tabla a la variable global 
 
         }
 
