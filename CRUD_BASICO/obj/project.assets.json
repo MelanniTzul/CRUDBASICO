@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\.Net c#\\CRUD_BASICO\\CRUD_BASICO\\CRUD_BASICO.csproj",
+      "projectUniqueName": "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\Net c#\\CRUD_BASICO\\CRUD_BASICO\\CRUD_BASICO.csproj",
       "projectName": "CRUD_BASICO",
-      "projectPath": "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\.Net c#\\CRUD_BASICO\\CRUD_BASICO\\CRUD_BASICO.csproj",
+      "projectPath": "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\Net c#\\CRUD_BASICO\\CRUD_BASICO\\CRUD_BASICO.csproj",
       "packagesPath": "C:\\Users\\Melanni Tzul\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\.Net c#\\CRUD_BASICO\\CRUD_BASICO\\obj\\",
+      "outputPath": "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\Net c#\\CRUD_BASICO\\CRUD_BASICO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

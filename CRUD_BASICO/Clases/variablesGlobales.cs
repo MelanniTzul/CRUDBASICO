@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace CRUD_BASICO.Clases
 {
+    //Clase de DataTable
     internal class variablesGlobales
     {
         public static DataTable baseDatosGlobal { get; set; } = new DataTable();
-
-
 
     }
 }

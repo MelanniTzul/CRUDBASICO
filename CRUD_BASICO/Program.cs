@@ -14,13 +14,6 @@ namespace CRUD_BASICO
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
-
-            //Funcion creacion de columnas
-            static void creacionColumnas() { 
-
-            }
-
-
         }
     }
 }
