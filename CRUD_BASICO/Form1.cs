@@ -6,7 +6,6 @@ namespace CRUD_BASICO
     public partial class Form1 : Form
     {
         //DataTable representa una tabla de datos relacionales de la memoria
-        //DataTable datos = new DataTable();//Cree mi tabla de datos 
         DataTable datos = Clases.variablesGlobales.baseDatosGlobal;//tabla creada por medio de una clase
 
         public Form1()
@@ -144,15 +143,11 @@ namespace CRUD_BASICO
             Form formulario = new Form2();//creamos una variable y llamamos alformualrio que queremos mostrar
             formulario.Show();//llamamos al Form2
 
-            //Mi variableglobal le asigno los datos que de mi tabla que ya tengo aqui                  
-            // Clases.variablesGlobales.baseDatosGlobal=datos;//le paso mis datos de mi tabla a la variable global 
-
         }
 
         private void btn_guardar_archivo_Click(object sender, EventArgs e)
         {
             //PARA ESCRIBIR O CREAR ARCHIVOS DE TEXTO 
-
             string ruta = "C:\\Users\\Melanni Tzul\\Desktop\\Curso .NET\\Net c#\\CRUD_BASICO\\Nombres.txt";
             StreamWriter sw = new StreamWriter(ruta);
 

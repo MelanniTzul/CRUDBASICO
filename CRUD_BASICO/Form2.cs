@@ -18,10 +18,11 @@ namespace CRUD_BASICO
         {
             InitializeComponent();
         }
-        //DataTable datos = new DataTable();//Cree mi tabla de datos 
+  
         DataTable datos = Clases.variablesGlobales.baseDatosGlobal;//Creamos tabla por medio de una clase
         private void text_buscador_TextChanged(object sender, EventArgs e)
         {
+            //Mi variableglobal le asigno los datos que de mi tabla que ya tengo  
             Clases.variablesGlobales.baseDatosGlobal = datos;
 
         }
@@ -78,9 +79,7 @@ namespace CRUD_BASICO
                     for (int i = 0; i < datos.Rows.Count; i++)
                     {
                         if (datos.Rows[i][0].ToString() == txt_buscador.Text)
-                        {
-                           // lbl_carroSeleccionado.Text = txt_buscador.Text;
-                             //lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString();
+                        {                          
                             lbl_carroSeleccionado.Text = datos.Rows[i][0].ToString() + "-" + datos.Rows[i][1].ToString() + "-" + datos.Rows[i][2].ToString() + "-" + datos.Rows[i][3].ToString() + "-" + datos.Rows[i][4].ToString() + "-" + datos.Rows[i][5].ToString();
                         }
                     }
